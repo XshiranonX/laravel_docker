@@ -1,0 +1,22 @@
+{
+    // 任意の名前でOK。
+    "name": "laravel_project",
+   
+    // コンテナを作成するためのDockerfile(docker-compose.yml)を指定。
+    "dockerComposeFile": [
+          "../docker-compose.yml"
+    ],
+   
+    // port転送設定。
+    "forwardPorts": [80],
+    //docker-compose.ymlのservicesと合わせる
+    "service": "app", 
+    // コンテナログインした際のカレントディレクトリ指定。
+    "workspaceFolder": "/var/www/app",
+   
+    // コンテナが生成されたときに、コンテナ側にインストールするVScodeの拡張機能。
+    // 今回はJava Extension PackとTomcat for Javaをインストール。
+    "extensions": [
+      "neilbrayfield.php-docblocker"
+    ],
+  }
