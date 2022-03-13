@@ -6,3 +6,4 @@ RUN apt-get update && \
     
 RUN sed -i 's!/var/www/html!/var/www/app/public!g' /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
+RUN chmod -R 777 /var/www/app/storage/
