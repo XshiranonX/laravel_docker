@@ -4,6 +4,13 @@ laravel環境構築用、及び簡単な動作確認用のテストアプリを�
 アプリ内容は下記参照<br>
 https://qiita.com/sano1202/items/6021856b70e4f8d3dc3d
 
+# Environment
+下記のバージョンで動くことは確認、よほど古くなければ大丈夫
+```
+Docker version 20.10.8, build 3967b7d
+docker-compose version 1.29.0, build 07737305
+```
+
 ## How to Use
 ### サーバ上で直接起動する場合
 ディレクトリで
