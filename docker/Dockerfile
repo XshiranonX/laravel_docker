@@ -5,3 +5,4 @@ RUN apt-get update && \
     docker-php-ext-install pdo_mysql
     
 RUN sed -i 's!/var/www/html!/var/www/app/public!g' /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite

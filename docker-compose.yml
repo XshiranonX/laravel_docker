@@ -5,13 +5,16 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./app:/var/www/app
+      - type: bind
+        source: "./app"
+        target: "/var/www/app"
+      - ./apache2.conf:/etc/apache2/apache2.conf
     working_dir: /var/www/app
   db:
     image: mysql:8.0
     ports:
       - 3306:3306
+    volumes:
+      - ./volumes:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: database
-      MYSQL_USER: user
-      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: password

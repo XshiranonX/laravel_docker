@@ -8,7 +8,7 @@
     ],
    
     // port転送設定。
-    "forwardPorts": [80],
+    "forwardPorts": [80,8000],
     //docker-compose.ymlのservicesと合わせる
     "service": "app", 
     // コンテナログインした際のカレントディレクトリ指定。
