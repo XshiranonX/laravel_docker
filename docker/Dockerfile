@@ -1,4 +1,4 @@
-FROM php:8.0-apache
+FROM php:7.4-apache
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN apt-get update && \
     apt-get -y install git zip unzip && \
