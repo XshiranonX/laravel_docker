@@ -13,7 +13,8 @@ use App\Http\Controllers\BookController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/book', [BookController::class, 'index']);
+// Route::get('/book', [BookController::class, 'index']);
+Route::resource('book', BookController::class);
 Route::get('/', function () {
     return view('welcome');
 });
